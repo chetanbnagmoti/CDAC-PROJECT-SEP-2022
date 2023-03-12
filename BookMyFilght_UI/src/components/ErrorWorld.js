@@ -1,5 +1,5 @@
 import React from 'react';
-import background from '../assets/images/planebg1.jpg';
+import background from '../assets/images/planebg.jpg';
 
 /**
  * 
