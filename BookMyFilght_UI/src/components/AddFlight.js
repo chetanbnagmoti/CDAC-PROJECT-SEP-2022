@@ -5,7 +5,7 @@ import Header from './Header';
 import FlightServiceRest from '../services/FlightServiceRest';
 
 /**
- * @author Vikrant
+ * @author Chetan_Nagmoti
  * this component takes input from admin for creating new flight
  * FlightServiceRest : Service for adding new flight in the database
  */
@@ -119,7 +119,7 @@ class AddFlight extends React.Component {
                 <div className="input-group mb-2 mr-sm-2">    
                     <label className="col-4 my-1 p-1 bg-light border border-darken-2">Flying Date</label>
                     <input className="col-5 my-1 p-1 border border-darken-2" type="date" value={this.state.travelDate}
-                     name="travelDate" onChange={this.handleInput} required  placeholder='Enter the Traveling Date'/>
+                     name="travelDate" onChange={this.handleInput} required />
                 </div>
 
                 <div className="input-group mb-2 mr-sm-2">    

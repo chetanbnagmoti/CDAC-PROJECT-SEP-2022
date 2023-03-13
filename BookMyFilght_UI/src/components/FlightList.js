@@ -2,6 +2,7 @@ import React from 'react';
 import { withRouter } from 'react-router-dom';
 
 /**
+ * @author Chetan_Nagmoti
  * Child component for SearchFlight component
  * Renders list of flights on search
  */

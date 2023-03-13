@@ -1,6 +1,9 @@
 import React, { Component } from "react";
-import homepage from "../assets/images/homepage1.jpeg";
 
+/**
+ * @author Chetan_Nagmoti
+ * this component renders home page for admin
+ */
 class ChetanInfoRight extends Component {
   render() {
     return (
@@ -12,14 +15,7 @@ class ChetanInfoRight extends Component {
               <div class="col-md-9">
                 <h1>{this.props.name}</h1>
                 <h5>{this.props.dese}</h5>
-                {/* <p class="border-top pt-2">
-            <div className='conatiner'>
-            <div className='row'> 
-            <div className='col'>
-                </div>  
-            </div>
-            </div>
-        </p> */}
+
                 <nav class=" text-drak-50 mb-5">
                   <div class="container">
                     <div class="row p-3">

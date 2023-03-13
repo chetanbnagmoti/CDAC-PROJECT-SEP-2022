@@ -6,7 +6,7 @@ import Footer from './Footer';
 import Header from './Header';
 
 /** 
- * @author Vikrant
+ * @author Chetan_Nagmoti
  * This component will render summary of the booking
  * taking data from local storage
 */

@@ -6,7 +6,7 @@ import Header from './Header';
 import Footer from './Footer';
 
 /**
- * @author Vikrant 
+ * @author Chetan_Nagmoti
  * this component renders home page for admin
  */
 function Admin(props) {
@@ -36,7 +36,7 @@ function Admin(props) {
                     <li className="list-group-item">
                         <Link className="card-link" to="/allFlights">All Flight</Link>
                     </li>
-                    
+                    <li className="list-group-item"></li>
                 </ul>
             </div>
             

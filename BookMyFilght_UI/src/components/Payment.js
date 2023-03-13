@@ -9,7 +9,7 @@ import Footer from './Footer';
 import Header from './Header';
 
 /**
- * @author Vikrant
+ * @author Bhavesh
  * this components renders payment page and validate input payment fields
  * BookingService: Using Service to generate ticket and updating pay status of booking 
  */
@@ -38,15 +38,18 @@ class Payment extends Component {
         this.service.generateTicket(this.state).then(response => {
             console.log(response.data)
             if(response.status===200)
+            
                 this.props.history.push('/ticket')
         })
         
             
     } 
 
+   
     
     
     render(){
+        
         if(!localStorage.getItem('user')){return null}
     return (
         
@@ -87,7 +90,7 @@ class Payment extends Component {
                                 <form>
                                 <div className="form-group">
                                         <label for="cc-number" className="control-label">CARD NUMBER</label> 
-                                        <input name="cnumber"  type="mobile" className="form-control" placeholder="•••• •••• •••• ••••" pattern="[0-9]{16}" required/> 
+                                        <input  name="cnumber"  type="mobile" className="form-control" placeholder="•••• •••• •••• ••••" pattern="[0-9]{16}" required="required"/> 
                                 </div>
                                 
                                 <br></br>
@@ -96,7 +99,7 @@ class Payment extends Component {
                                         <div className="col-md-6">
                                             <div className="form-group"> 
                                             <label for="cc-exp" className="control-label">CARD EXPIRY</label>
-                                            <input id="cc-exp" type="month" className="form-control"  required/>
+                                            <input id="cc-exp" type="month" className="form-control"  required="required"/>
                                             </div>
                                         </div>
                                         <div className="col-md-6">
@@ -109,7 +112,7 @@ class Payment extends Component {
                                 <br></br>
                                 <div className="form-group"> 
                                         <label for="holder-name" className="control-label">CARD HOLDER NAME</label> 
-                                        <input name="cname" type="text" className="form-control" pattern="[A-Za-z]{4,}" required />
+                                        <input name="cname" type="text" className="form-control" pattern="[A-Za-z]{4,}" required="require" />
                                 </div>
                                 
                                 <br></br>
@@ -117,7 +120,8 @@ class Payment extends Component {
                         
                                 <div className="card-footer"> 
                                    <div className="col-md-12 text-center">
-                                        <button type="submit" onClick={this.createTicket} className="subscribe btn btn-primary btn-block shadow-sm"> Make Payment </button>
+                                      
+                                   <button type="submit" onClick={this.createTicket} className="subscribe btn btn-primary btn-block shadow-sm"> Make Payment </button>
                                     </div> 
                                 </div>
                                 </form>
@@ -130,8 +134,8 @@ class Payment extends Component {
                 </div>
             </div>           
                  
-        </div>
-        <Footer />
+        </div >
+        <Footer  />
 		</div>
          );
     }

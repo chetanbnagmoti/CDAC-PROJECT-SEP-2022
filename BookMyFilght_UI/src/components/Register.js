@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import UserService from '../services/UserService';
-import planeBG from "../assets/images/planebg1.jpg";
+import planeBG from "../assets/images/planebg.jpg";
 import Footer from './Footer';
 import Header from './Header';
 
 /** 
- * @author Vikrant
+ * @author Chetan_Nagmoti
  * This component will render Register page for the app 
  * UserService: Service for registering new user
 */
@@ -81,55 +81,55 @@ export default class Register extends Component {
     return (
         <div class='pt-5'>
             <Header />
-			<div class="py-5" style={{backgroundImage: `url(${planeBG})`,overflow: 'hidden', height: '1000px'}}>
+			<div className="bg-info  py-5" style={{backgroundImage: `url(${planeBG})`,overflow: 'hidden', height: '1000px',backgroundColor:"#000033"}}>
 				<div className="row mb-4">
 					<div className="col-lg-8 mx-auto text-center">
-					<h1 className="display-6" style={{color:'white', fontWeight:'50pt'}}>Registration</h1>
+					<h1 className="display-6" style={{color:'white', fontWeight:'80pt',fontSize:"50px"}}><span ><b>Registration</b></span></h1>
 					</div>
 				</div> 
-				<div className="row">
-				<div className="col-md-6 mx-auto">
-					<div className="card ">
+				<div className="row ">
+				<div className="col-md-6 mx-auto ">
+					<div className="card  ">
 					<div className="card-header">
-                    <div className="bg-white shadow-sm pt-4 pl-2 pr-2 pb-2">
+                    <div className=" text-white shadow-sm pt-4 pl-2 pr-2 pb-2" style={{backgroundColor:"#000033"}}>
                        
                     <div className="tab-content">
                         <div className="tab-pane fade show active pt-3">
-                            <form>
-                                <div className="form-group"> 
-									<h6><span className="form-label">Name</span></h6>
-										<input type="text" name="fname" value={this.state.fname} onChange={this.handleInput} required className="form-control" />
+                            <form >
+                                <div className="form-group" > 
+									<h6><span className="form-label  ">Name</span></h6>
+										<input  type="text" name="fname" value={this.state.fname} onChange={this.handleInput} required className="form-control bg-info-subtle"style={{backgroundColor:"#EEE8AA"} }/>
 								</div>
-                                <div className="form-group"> 
-									<h6><span className="form-label">Email</span></h6>
-										<input type="email" name="email" value={this.state.email} onChange={this.handleInput} required className="form-control" />
+                                <div className="form-group " > 
+									<h6><span className="form-label ">Email</span></h6>
+										<input  type="email" name="email" value={this.state.email} onChange={this.handleInput} required className="form-control " style={{backgroundColor:"#EEE8AA"} }/>
 								</div>
                                 <div className="form-group"> 
 									<h6><span className="form-label">Contact</span></h6>
-										<input  name="phone" pattern="[6-9][0-9]{9}" maxLength="10" value={this.state.phone} onChange={this.handleInput} required className="form-control" />
+										<input  name="phone" pattern="[6-9][0-9]{9}" maxLength="10" value={this.state.phone} onChange={this.handleInput} required className="form-control " style={{backgroundColor:"#EEE8AA"} }/>
 								</div>
                                 <div className="form-group"> 
 									<h6><span className="form-label">Username</span></h6>
-										<input type="text" name="username" value={this.state.username} onChange={this.handleInput} required className="form-control" />
+										<input type="text" name="username" value={this.state.username} onChange={this.handleInput} required className="form-control"style={{backgroundColor:"#EEE8AA"} } />
 								</div>
-                                <div className="form-group"> 
-									<h6><span className="form-label">Password</span></h6>
-										<input type="password" name="password" value={this.state.password} onChange={this.handleInput} required className="form-control" />
+                                <div className="form-group "> 
+									<h6><span className="form-label ">Password</span></h6>
+										<input type="password" name="password" value={this.state.password} onChange={this.handleInput} required className="form-control"style={{backgroundColor:"#EEE8AA"} } />
 								</div>
-                                <div className="form-group"> 
-									<h6><span className="form-label">Confirm Password</span></h6>
-										<input type="text" name="cpasswd" onChange={this.handlePass} className="form-control" required/><div className="text-danger">{this.state.cp} </div> 
+                                <div className="form-group "> 
+									<h6><span className="form-label ">Confirm Password</span></h6>
+										<input type="text" name="cpasswd" onChange={this.handlePass} className="form-control" required style={{backgroundColor:"#EEE8AA"} }/><div className="text-danger">{this.state.cp} </div> 
 								</div>
                                 
                                 <div className="card-footer"> 
-								<button onClick={this.registerUser}  className="subscribe btn btn-primary btn-block shadow-sm" disabled={!this.state.flag}>Register</button>
+								<button onClick={this.registerUser}  className="subscribe btn btn-light text-success btn-block shadow-sm" disabled={!this.state.flag}><h2>Register</h2></button>
 								
 								</div>      
                             </form>
                             
                         </div>
                     </div>
-                    <div className="form-group" > 
+                    <div classNameName="form-group" > 
 				
                        <div ><Link className="card-link" to="/login"><button  type="button" className="btn  btn-link btn-block">Already registered? Login Now!</button></Link>  </div> 
                     </div>

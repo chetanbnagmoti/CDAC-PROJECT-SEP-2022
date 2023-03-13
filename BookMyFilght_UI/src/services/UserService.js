@@ -1,7 +1,7 @@
 import axios from "axios";
 
 /**
- * @author Vikrant
+ * @author Bhavesh
  * Using Axios library to send request to spring boot and fetch response
  * The service method handles operations for user
  */

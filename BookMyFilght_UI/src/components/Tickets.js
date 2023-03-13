@@ -5,7 +5,7 @@ import Footer from './Footer';
 import BookingService from '../services/BookingService';
 
 /**
- * @author Dhananjay
+ * @author Chetan_Nagmoti
  * this component renders list of tickets for a logged user
  * BookingService: Service for fetching tickets details from database
  */

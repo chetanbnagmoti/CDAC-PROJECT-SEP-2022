@@ -1,68 +1,49 @@
-import React, { Component } from "react";
-import ChetanInfo from "./ChetanInfo";
-import ChetanInfoRight from "./ChetanInfoRight";
-import Footer from "./Footer";
+import React from "react";
 import Header from "./Header";
-import Info from "./Info";
 
-class AboutUs extends Component {
-  render() {
-    return (
-      <>
-        <div>
-          <Header />
+function AboutUs() {
+  return (
+    <React.Fragment>
+       <Header/>
+      <div class="container-fluid mt-5 pt-5">
+        <div className="row">
+  <div className="col  text text-center text-primary display-6 ">
+  About Us
+  </div>
         </div>
+        <div className="row mt-5 mb-5">
+          <div className="col-6 bg-primary ">
+            <p1>
+            An airline reservation system is a software application used by airlines to manage the entire booking process, from ticket sales to flight schedules, seat availability, and passenger information. The airline reservation system provides a convenient and efficient 
+            way for travelers to book flights, choose their seats, and pay for their tickets online.
 
-        <div class="container-fluid border mb-5 bg-light">
-          <div class="container bg-white mt-5">
-            <div class="row">
-              <div class="col">
-                <div class="p-5">
-                  <div>
-                    
-                    <ChetanInfo
-                      name="Chetan Nagmoti"
-                      email="chetanbnagmoti@gamil.com"
-                      photo="https://avatars.githubusercontent.com/u/119286565?v=4"
-                      mobile="8390569860"
-                      gitHub="https://github.com/chetanbnagmoti"
-                      dese="Software Developer"
-                    />
-                    <ChetanInfoRight
-                      name="Bhavesh Gupta"
-                      email="bhaveshgupta027@gamil.com"
-                      photo="https://avatars.githubusercontent.com/u/119398229?v=4"
-                      mobile="7021787578"
-                      gitHub="https://github.com/bhaveshgupta0"
-                      dese="Software Developer"
-                    />
-                    <ChetanInfo
-                      name=" Sudeep Suryawanshi"
-                      email="suryawanshisudeep97@gmail.com"
-                      photo="https://avatars.githubusercontent.com/u/119395292?s=400&u=d99c219a4900528ae534359d2e04386d1593d21e&v=4"
-                      mobile="8408920708"
-                      gitHub="https://github.com/sudeep2610"
-                      dese="Software Developer"
-                    />
-                    <ChetanInfoRight
-                      name="Mayuresh Sanjay Kate"
-                      email="katemayuresh53@gmail.com"
-                      photo="https://pps.whatsapp.net/v/t61.24694-24/328710492_215009084425939_680105589779978127_n.jpg?ccb=11-4&oh=01_AdTy8VEMRqU9rZG7fk0mmbhAGDYEyFxJdLJxvag5B108Lg&oe=6417D1DF"
-                      mobile="8329930383"
-                      gitHub="https://github.com/KateMayuresh"
-                      dese="Software Developer"
-                    />
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="container bg-white"></div>
+            </p1>
           </div>
-          <Footer />
+          <div className="col-6 bg-info">
+            <p1>
+            One of the key benefits of using an airline reservation system is that it allows travelers to compare different flights and fares, enabling them to make informed decisions about their travel plans. This saves time and effort, as travelers can easily search for 
+            flights and make bookings without having to physically visit a travel agent or airline office.
+            </p1>
+          </div>
+          <br/>
         </div>
-      </>
-    );
-  }
-}
+        <div className="row mt-5 mb-5">
+          <div className="col-6 bg-info">
+            <p1>
+            An airline reservation system is a software application used by airlines to manage the entire booking process, from ticket sales to flight schedules, seat availability, and passenger information. The airline reservation system provides a convenient and efficient 
+            way for travelers to book flights, choose their seats, and pay for their tickets online.
 
+            </p1>
+          </div>
+          <div className="col-6 bg-primary">
+            <p1>
+            One of the key benefits of using an airline reservation system is that it allows travelers to compare different flights and fares, enabling them to make informed decisions about their travel plans. This saves time and effort, as travelers can easily search for 
+            flights and make bookings without having to physically visit a travel agent or airline office.
+            </p1>
+          </div>
+        </div>
+      </div>
+    </React.Fragment>
+  );
+}
 export default AboutUs;
