@@ -141,7 +141,7 @@ class AddFlight extends React.Component {
                 </div>
 
                 <div className="input-group mb-2 mr-sm-2">    
-                    <label className="col-4 my-1 p-1 bg-light border border-darken-2">Available Seats</label>
+                    <label className="col-4 my-1 p-1 bg-light border border-darken-2">Capacity Of Seats</label>
                     <input type="number" className="col-5 my-1 p-1 border border-darken-2" value={this.state.availableSeats}
                      name="availableSeats" onChange={this.handleInput}  required />
                 </div>
