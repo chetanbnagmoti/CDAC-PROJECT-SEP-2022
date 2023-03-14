@@ -25,7 +25,7 @@ class Booking extends Component {
         source: this.flight.source,
         destination: this.flight.destination,
         date: this.flight.travelDate,
-        passengers: [0, 1, 2, 3, 4, 5, 6],
+        passengers: [0,1, 2, 3, 4, 5, 6],
         numberOfSeatsToBook: 0,
       };
     }

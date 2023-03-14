@@ -90,7 +90,7 @@ class Payment extends Component {
                                 <form>
                                 <div className="form-group">
                                         <label for="cc-number" className="control-label">CARD NUMBER</label> 
-                                        <input  name="cnumber"  type="mobile" className="form-control" placeholder="•••• •••• •••• ••••" pattern="[0-9]{16}" required="required"/> 
+                                        <input  name="cnumber"  type="mobile" className="form-control" placeholder="•••• •••• •••• ••••" pattern="[0-9]{16}" /> 
                                 </div>
                                 
                                 <br></br>

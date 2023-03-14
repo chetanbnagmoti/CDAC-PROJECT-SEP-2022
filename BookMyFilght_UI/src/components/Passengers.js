@@ -21,7 +21,7 @@ class Passengers extends Component {
         this.state ={ 
             npsgn:parseInt(localStorage.getItem("nop")),
             pname:'',
-            gen:['Select','Male','Female'],
+            gen:['Select','Male','Female','Other'],
             gender:'',
             age:'',
             id:1,
@@ -31,9 +31,7 @@ class Passengers extends Component {
     }
     }
 
-    componentDidMount(){
-        // console.log(this.state.npsgn)
-    }
+   
 
     /** this handle event method add a single passenger at a time in array*/
     handleClick = (idx) => {

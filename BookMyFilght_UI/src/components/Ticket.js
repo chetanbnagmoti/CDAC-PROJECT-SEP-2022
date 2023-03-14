@@ -53,7 +53,11 @@ class Ticket extends Component {
     if (!localStorage.getItem("user")) {
       this.props.history.push("/login");
       
+    
     }
+
+     
+  
   }
 
   onSeats = () => {
@@ -88,6 +92,8 @@ class Ticket extends Component {
       .then((response) => {
         console.log("SUCCESS!", response.status, response.text);
         alert("Your ticket details has been emailed !!");
+        this.props.history.push('/')
+       
       })
       .catch((err) => {
         console.log("FAILED...", err);
