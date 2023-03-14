@@ -15,7 +15,7 @@ import Tickets from './components/Tickets';
 import UpdateFlight from './components/UpdateFlight';
 import Summary from './components/Summary';
 import AboutUs  from './components/AboutUs';
-
+import ForgotPassword from './components/ForgotPassword';
 
 
 
@@ -40,6 +40,7 @@ function App() {
         <Route path="/allFlights" component={FlightListAdmin} />
         <Route path="/updateFlight" component={UpdateFlight} />
         <Route path="/about-us" component={AboutUs}/>
+        <Route path="/forgotPassword" component={ForgotPassword}/>
         <Route component={ErrorWorld} />
         
       </Switch>
