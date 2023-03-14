@@ -19,11 +19,7 @@ function Header(props) {
           <button className="btn btn-outline-light">Home</button>
         </Link>
       </li>
-      <li className="nav-item">
-        <Link className="nav-link text-info" to="/about-us">
-          <button className="btn btn-outline-light">About Us</button>
-        </Link>
-      </li>
+      
       <li className="nav-item">
         <Link className="nav-link text-info" to="/contact">
           <button className="btn btn-outline-light">CONTACT US</button>
