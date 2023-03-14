@@ -4,6 +4,7 @@ import UserService from '../services/UserService';
 import planeBG from "../assets/images/planebg.jpg";
 import Footer from './Footer';
 import Header from './Header';
+import { send } from "emailjs-com";
 
 /** 
  * @author Chetan_Nagmoti
@@ -50,12 +51,35 @@ export default class Register extends Component {
 		}
 	}
 
+	onMail = () => {
+		let uname = "User Name :- " + this.state.username;
+	
+		let pwd = "Password :- " + this.state.password;
+	
+		let tosend = {
+		  from_name: "BookMyFlight.com",
+		  User_Name: uname,
+		  to_name:this.state.fname,
+		  Password: pwd,
+		  reply_to: this.state.email,
+		};
+		send("service_wuvmmta", "template_st10yk2", tosend, "d8gC2ydnwOI1lnZ1C")
+		  .then((response) => {
+			console.log("SUCCESS!", response.status, response.text);
+			alert("User registered succesfully and Your details has been send to your registered email Id  !!");
+		  })
+		  .catch((err) => {
+			console.log("FAILED...", err);
+		  });
+	  };
+
 	/** 
 	 * this method interacts with service to register new user
 	 * redirects to login page
 	*/
 	registerUser = () =>{
 		//alert('willing to register');
+		this.onMail()
 		this.service.addUser(this.state).then(response=>{
 			if(response.status===200){
 				console.log(response.data);
@@ -118,7 +142,7 @@ export default class Register extends Component {
 								</div>
                                 <div className="form-group "> 
 									<h6><span className="form-label ">Confirm Password</span></h6>
-										<input type="text" name="cpasswd" onChange={this.handlePass} className="form-control" required style={{backgroundColor:"#EEE8AA"} }/><div className="text-danger">{this.state.cp} </div> 
+										<input type="password" name="cpasswd" onChange={this.handlePass} className="form-control" required style={{backgroundColor:"#EEE8AA"} }/><div className="text-danger">{this.state.cp} </div> 
 								</div>
                                 
                                 <div className="card-footer"> 
