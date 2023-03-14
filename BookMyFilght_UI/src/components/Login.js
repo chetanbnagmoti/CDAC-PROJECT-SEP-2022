@@ -160,6 +160,18 @@ export default class Login extends Component {
                       </Link>{" "}
                     </div>
                   </div>
+                  <div classNameName="form-group">
+                    <div>
+                      <Link className="card-link" to="/forgotPassword">
+                        <button
+                          type="button"
+                          className="btn  btn-link btn-block"
+                        >
+                          Forgot-Password
+                        </button>
+                      </Link>{" "}
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
